@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    
+    <meta http-equiv="refresh" content="3; url=https://johnthickstun.com/" />
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   John  Thickstun
 
 
-  | blog
+  | conditional sampling
 
 </title>
 <meta name="description" content="John Thickstun's professional website.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎶</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="https://johnthickstun.com/blog/">
+<link rel="canonical" href="https://johnthickstun.com/projects/1_project/">
 
 
 <!-- Dark Mode -->
@@ -80,8 +80,6 @@
           </li>
           
           <!-- Other pages -->
-          
-          
           
           
           
@@ -202,8 +200,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -222,119 +220,15 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2>a simple whitespace theme for academics</h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">conditional sampling</h1>
+    <p class="post-description">We can use a generative model as a prior for decomposing a linear mixture of sources into its constituent parts. We demonstrate this on the left for linearly superimposed images of churches and bedrooms. The idea is to train train two generative models: one that estimates the likelihood of the distribution over images of churches, and another that does the same for images of bedrooms. We can separate a mixture of images by decomposing it into two images that are likely under the priors for churches and bedrooms respectively, that satisfy the constraint that decomposition must sum to the given mixture. This can be interpreted as conditional sampling from the posterior distribution over sources given a mixture. Our work on visual source separation has appeared at ICML 2020. Extensions of these results to audio separation and more general conditional sampling problems appeared at ICML 2021.</p>
+  </header>
 
-
-  <ul class="post-list">
+  <article>
     
 
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2021/diagrams/">a post with diagrams</a>
-      </h3>
-      <p>an example of a blog post with diagrams</p>
-      <p class="post-meta"> 3 min read &nbsp; &middot; &nbsp;
-        July 4, 2021
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2021">
-          <i class="fas fa-calendar fa-sm"></i> 2021 </a>
-
-          
-
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2021/distill/">a distill-style blog post</a>
-      </h3>
-      <p>an example of a distill-style blog post and main elements</p>
-      <p class="post-meta"> 7 min read &nbsp; &middot; &nbsp;
-        May 22, 2021
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2021">
-          <i class="fas fa-calendar fa-sm"></i> 2021 </a>
-
-          
-
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2020/github-metadata/">a post with github metadata</a>
-      </h3>
-      <p>a quick run down on accessing github metadata.</p>
-      <p class="post-meta"> 1 min read &nbsp; &middot; &nbsp;
-        September 28, 2020
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2020">
-          <i class="fas fa-calendar fa-sm"></i> 2020 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/sample-posts">
-              <i class="fas fa-tag fa-sm"></i> sample-posts</a> &nbsp;
-              
-            <a href="/blog/category/external-services">
-              <i class="fas fa-tag fa-sm"></i> external-services</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-  </ul>
-
-  
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+  </article>
 
 </div>
 
@@ -345,8 +239,8 @@
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2025 John  Thickstun.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+    © Copyright 2025 John  Thickstun.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
 
     
     

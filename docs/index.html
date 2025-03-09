@@ -12,7 +12,7 @@
   John  Thickstun
 
 
-  | blog
+  | notes
 
 </title>
 <meta name="description" content="John Thickstun's professional website.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎶</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="https://johnthickstun.com/blog/">
+<link rel="canonical" href="https://johnthickstun.com/docs/">
 
 
 <!-- Dark Mode -->
@@ -135,9 +135,11 @@
           
           
           
-          <li class="nav-item ">
+          <li class="nav-item active">
               <a class="nav-link" href="/docs/">
                 notes
+                
+                <span class="sr-only">(current)</span>
                 
               </a>
           </li>
@@ -202,8 +204,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -222,119 +224,66 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2>a simple whitespace theme for academics</h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">notes</h1>
+    <p class="post-description">Notes and tutorials loosely organized by topic.</p>
+  </header>
+
+  <article>
+    <h4 id="machine-learning">machine Learning</h4>
+
+<p><a href="gans.pdf">A brief mathematical introduction to GAN’s</a></p>
+
+<p><a href="transformers.pdf">The Transformer model in equations</a></p>
+
+<p><a href="info_theory.pdf">Information theory: an alternative introduction with applications to concentration of measure</a></p>
+
+<p><a href="crf.pdf">Conditional Random Fields as a generalization of logistic regression</a></p>
+
+<p><a href="mercer.pdf">Kernels and Mercer’s Theorem</a></p>
+
+<p><a href="volterra.pdf">Some notes on Hilbert-Schmidt operators</a></p>
+
+<h4 id="probability">probability</h4>
+
+<p><a href="fast_jlt.pdf">The fast Johnson-Lindenstrauss transform</a></p>
+
+<p><a href="coinflip.pdf">The coin flip martingale</a></p>
+
+<p><a href="density.pdf">Probability densities from a measure-theoretic perspective</a></p>
+
+<p><a href="changeofmeasure.pdf">Change of measure</a></p>
+
+<h4 id="other-computer-science">other computer science</h4>
+
+<p><a href="shannon_capacity.pdf">Estimating the Shannon capacity of a graph</a></p>
+
+<p><a href="lean.pdf">Thoughts on proof assistants</a> with companion Lean <a href="https://github.com/jthickstun/lean" target="_blank" rel="noopener noreferrer">code</a></p>
+
+<h4 id="finance">finance</h4>
+
+<p>Three perspectives on the Black-Scholes formula:</p>
+
+<ul>
+  <li><a href="bscrr.pdf">The limit of a discrete time CRR model</a></li>
+  <li><a href="bsmartingale.pdf">Hedging with a martingale representation</a></li>
+  <li><a href="bspde.pdf">The solution of the Black-Scholes PDE</a></li>
+</ul>
+
+<p><a href="stochform.pdf">Heuristics for manipulating stochastic differential equations</a></p>
+
+<p><a href="bopm.pdf">Negative probabilities in the binomial option pricing model</a></p>
+
+<h4 id="old-notes-from-college">old notes from college</h4>
+
+<p><a href="nva.pdf">Some linguistic observations</a></p>
+
+<p><a href="quotient.pdf">Quotient sigma-algebras</a></p>
+
+<p><a href="sets.pdf">Climbing a tower of abstractions</a></p>
 
 
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2021/diagrams/">a post with diagrams</a>
-      </h3>
-      <p>an example of a blog post with diagrams</p>
-      <p class="post-meta"> 3 min read &nbsp; &middot; &nbsp;
-        July 4, 2021
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2021">
-          <i class="fas fa-calendar fa-sm"></i> 2021 </a>
-
-          
-
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2021/distill/">a distill-style blog post</a>
-      </h3>
-      <p>an example of a distill-style blog post and main elements</p>
-      <p class="post-meta"> 7 min read &nbsp; &middot; &nbsp;
-        May 22, 2021
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2021">
-          <i class="fas fa-calendar fa-sm"></i> 2021 </a>
-
-          
-
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2020/github-metadata/">a post with github metadata</a>
-      </h3>
-      <p>a quick run down on accessing github metadata.</p>
-      <p class="post-meta"> 1 min read &nbsp; &middot; &nbsp;
-        September 28, 2020
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2020">
-          <i class="fas fa-calendar fa-sm"></i> 2020 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/sample-posts">
-              <i class="fas fa-tag fa-sm"></i> sample-posts</a> &nbsp;
-              
-            <a href="/blog/category/external-services">
-              <i class="fas fa-tag fa-sm"></i> external-services</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-  </ul>
-
-  
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+  </article>
 
 </div>
 
@@ -345,8 +294,8 @@
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2025 John  Thickstun.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+    © Copyright 2025 John  Thickstun.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
 
     
     
