@@ -1,6 +1,60 @@
 ---
 ---
 
+@inproceedings{huang2025aligning,
+  abstract  = {Despite significant recent advances in generative acoustic text-to-music (TTM) modeling, robust evaluation of these models lags behind, relying in particular on the popular Fr\'echet Audio Distance (FAD). In this work, we rigorously study the design space of reference-based divergence metrics for evaluating TTM models through (1) designing four synthetic meta-evaluations to measure sensitivity to particular musical desiderata, and (2) collecting and evaluating on MusicPrefs, the first open-source dataset of human preferences for TTM systems. We find that not only is the standard FAD setup inconsistent on both synthetic and human preference data, but that nearly all existing metrics fail to effectively capture desiderata, and are only weakly correlated with human perception. We propose a new metric, the MAUVE Audio Divergence (MAD), computed on representations from a self-supervised audio embedding model. We find that this metric effectively captures diverse musical desiderata (average rank correlation 0.84 for MAD vs. 0.49 for FAD and also correlates more strongly with MusicPrefs (0.62 vs. 0.14).},
+  title     = {Aligning Text-to-Music Evaluation with Human Preferences},
+  author    = {Yichen Huang and Zachary Novack and Koichi Saito and Jiatong Shi and Shinji Watanabe and Yuki Mitsufuji and John Thickstun and Chris Donahue},
+  booktitle = {International Society for Music Information Retrieval},
+  year      = {2025},
+  abbr      = {ISMIR},
+  arxiv     = {2503.16669},
+  code      = {https://github.com/i-need-sleep/mad},
+}
+
+@article{sekhar2025esoteric,
+  abstract  = {Diffusion-based language models offer a compelling alternative to autoregressive (AR) models by enabling parallel and controllable generation. Among this family of models, Masked Diffusion Models (MDMs) achieve the strongest performance but still underperform AR models in perplexity and lack key inference-time efficiency features--most notably, KV caching. In this work, we introduce Eso-LMs, a new family of models that fuses AR and MDM paradigms, enabling smooth interpolation between their perplexities while overcoming their respective limitations. Eso-LMs set a new state of the art on standard language modeling benchmarks. Crucially, we are the **first to introduce KV caching for MDMs** while preserving parallel generation, significantly improving inference efficiency. Combined with an optimized sampling schedule, our method achieves up to **65x** faster inference than standard MDMs and **4x** faster inference than prior semi-autoregressive approaches.},
+  title     = {Esoteric Language Models},
+  author    = {Subham Sekhar Sahoo and Zhihan Yang and Yash Akhauri and Johnna Liu and Deepansha Singh and Zhoujun Cheng and Zhengzhong Liu and Eric Xing and John Thickstun and Arash Vahdat},
+  year      = {2025}, 
+  abbr      = {arXiv},
+  arxiv     = {2506.01928},
+  code      = {https://github.com/s-sahoo/Eso-LMs},
+  website   = {http://s-sahoo.github.io/Eso-LMs},
+}
+
+@inproceedings{donahue2024hookpad,
+  abstract  = {Recent progress in generative models for music has highlighted the need for interactive, controllable systems that service the goals of musicians. In this paper, we introduce a system that integrates a compositional assistant and live improvisational partner directly into the modern music producer’s toolkit–the digital audio workstation. Our system design is guided by 1) integration with modern music production software, 2) non-linear songwriting workflows, and 3) enabling generative AI to support live improvisation tasks. We find that anticipatory transformer models are well suited for these goals, and present a method for adapting an anticipatory model for live improvisation. We call on future work to further explore human-AI co-performance by designing systems to be accessible and integrated into the workflows of domain experts.},
+  title     = {Hookpad Aria: A Copilot for Songwriters},
+  author    = {Chris Donahue and Shih-Lun Wu and Yewon Kim and Dave Carlton and Ryan Miyakawa and John Thickstun},
+  booktitle = {International Society for Music Information Retrieval Late Breaking Demos},
+  year      = {2024},
+  abbr      = {ISMIR-LBD},
+  arxiv     = {2502.08122},
+  website   = {https://www.hooktheory.com/hookpad/aria},
+}
+
+@article{jayaram2024constrained,
+  abstract  = {This paper describes an efficient algorithm for solving noisy linear inverse problems using pretrained diffusion models. Extending the paradigm of denoising diffusion implicit models (DDIM), we propose constrained diffusion implicit models (CDIM) that modify the diffusion updates to enforce a constraint upon the final output. For noiseless inverse problems, CDIM exactly satisfies the constraints; in the noisy case, we generalize CDIM to satisfy an exact constraint on the residual distribution of the noise. Experiments across a variety of tasks and metrics show strong performance of CDIM, with analogous inference acceleration to unconstrained DDIM: 10 to 50 times faster than previous conditional diffusion methods. We demonstrate the versatility of our approach on many problems including super-resolution, denoising, inpainting, deblurring, and 3D point cloud reconstruction.},
+  title     = {Constrained Diffusion Implicit Models},
+  author    = {Vivek Jayaram and Ira Kemelmacher-Shlizerman and Steven M Seitz and John Thickstun},
+  year      = {2024}, 
+  abbr      = {arXiv},
+  arxiv     = {2411.00359},
+  code      = {https://github.com/vivjay30/cdim},
+  website   = {https://grail.cs.washington.edu/projects/cdim/},
+} 
+
+@inproceedings{becker2024designing,
+  abstract  = {Recent progress in generative models for music has highlighted the need for interactive, controllable systems that service the goals of musicians. In this paper, we introduce a system that integrates a compositional assistant and live improvisational partner directly into the modern music producer’s toolkit–the digital audio workstation. Our system design is guided by 1) integration with modern music production software, 2) non-linear songwriting workflows, and 3) enabling generative AI to support live improvisation tasks. We find that anticipatory transformer models are well suited for these goals, and present a method for adapting an anticipatory model for live improvisation. We call on future work to further explore human-AI co-performance by designing systems to be accessible and integrated into the workflows of domain experts.},
+  title     = {Designing Live Human-AI Collaboration for Musical Improvisation},
+  author    = {Nic Becker and Ryan Louie and John Thickstun and Percy Liang},
+  booktitle = {CHI Workshop on Generative AI and HCI},
+  year      = {2024},
+  abbr      = {GenAICHI},
+  pdf       = {https://generativeaiandhci.github.io/papers/2024/genaichi2024_55.pdf},
+}
+
 @article{kuditipudi2023robust,
   abstract  = {We propose a methodology for planting watermarks in text from an autoregressive language model that are robust to perturbations without changing the distribution over text up to a certain maximum generation budget. We generate watermarked text by mapping a sequence of random numbers -- which we compute using a randomized watermark key -- to a sample from the language model. To detect watermarked text, any party who knows the key can align the text to the random number sequence. We instantiate our watermark methodology with two sampling schemes: inverse transform sampling and exponential minimum sampling. We apply these watermarks to three language models -- OPT-1.3B, LLaMA-7B and Alpaca-7B -- to experimentally validate their statistical power and robustness to various paraphrasing attacks. Notably, for both the OPT-1.3B and LLaMA-7B models, we find we can reliably detect watermarked text (p≤0.01) from 35 tokens even after corrupting between 40-50% of the tokens via random edits (i.e., substitutions, insertions or deletions). For the Alpaca-7B model, we conduct a case study on the feasibility of watermarking responses to typical user instructions. Due to the lower entropy of the responses, detection is more difficult: around 25% of the responses -- whose median length is around 100 tokens -- are detectable with p≤0.01, and the watermark is also less robust to certain automated paraphrasing attacks we implement.},
   title     = {Robust distortion-free watermarks for language models},
