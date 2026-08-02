@@ -8,7 +8,7 @@ nav: true
 
 #### course notes
 
-<a href="https://courses.cs.washington.edu/courses/cse599i/20au/">CSE 599 Generative Models</a>:University of Washington (2020)
+<a href="https://courses.cs.washington.edu/courses/cse599i/20au/">CSE 599 Generative Models</a>: University of Washington (2020)
 
 #### machine learning
 
