@@ -1,6 +1,99 @@
 ---
 ---
 
+@inproceedings{lin2026factual,
+  abstract  = {Large audio language models (LALMs) leverage multimodal representations to generate open-ended answers to natural language queries about audio. In this paper, we (1) provide empirical evidence that assessment of LALMs using the popular MusicQA dataset fails to measure whether a model's responses about music are factually correct, and (2) develop a new protocol for assessing the music comprehension capabilities of LALMs. Specifically, we propose an evaluation protocol that prompts a LALM for factually verifiable information, and parses its open-ended response into a structured format that can be objectively assessed using Precision, Recall, and F1 scores. Using this protocol, we define a benchmark consisting of six factual information retrieval tasks defined on three diverse datasets: MusicNet, the Free Music Archive, and OverClocked ReMix. We benchmark nine recent LALMs, including frontier models like Gemini and the latest open models like Music Flamingo, and release the suite of evaluation scripts at https://github.com/DCL2004/LALM-Eval to facilitate benchmarking of new LALMs.},
+  title     = {Assessing Factual Music Comprehension in Large Audio Language Models},
+  author    = {Daniel Chenyu Lin and Michael Freeman and John Thickstun},
+  booktitle = {International Society for Music Information Retrieval},
+  year      = {2026},
+  abbr      = {ISMIR},
+  arxiv     = {2511.05550},
+}
+
+@inproceedings{sahoo2026scaling,
+  abstract  = {Diffusion language models are a promising alternative to autoregressive models due to their potential for faster generation. Among discrete diffusion approaches, Masked diffusion currently dominates, largely driven by strong perplexity on language modeling benchmarks. In this work, we present the first scaling law study of uniform-state and interpolating discrete diffusion methods. We also show that Masked diffusion models can be made approximately 12% more FLOPs-efficient when trained with a simple cross-entropy objective. We find that perplexity is informative within a diffusion family but can be misleading across families, where models with worse likelihood scaling may be preferable due to faster and more practical sampling, as reflected by the speed-quality Pareto frontier. These results challenge the view that Masked diffusion is categorically the future of diffusion language modeling and that perplexity alone suffices for cross-algorithm comparison. Scaling all methods to 1.7B parameters, we show that uniform-state diffusion remains competitive on likelihood-based benchmarks and outperforms autoregressive and Masked diffusion models on GSM8K, despite worse validation perplexity.},
+  title     = {Scaling Beyond Masked Diffusion Language Models},
+  author    = {Subham Sekhar Sahoo and Jean-Marie Lemercier and Zhihan Yang and Justin Deschenaux and Jingyu Liu and John Thickstun and Ante Jukic},
+  booktitle = {International Conference on Machine Learning},
+  year      = {2026},
+  abbr      = {ICML},
+  arxiv     = {2602.15014},
+  code      = {https://github.com/s-sahoo/scaling-dllms},
+  website   = {https://s-sahoo.com/scaling-dllms/},
+}
+
+@inproceedings{sekhar2026esoteric,
+  abstract  = {Diffusion-based language models offer a compelling alternative to autoregressive (AR) models by enabling parallel and controllable generation. Within this family, Masked Diffusion Models (MDMs) currently perform best but still underperform AR models in perplexity and lack key inference-time efficiency features, most notably KV caching. We introduce Eso-LMs, a new family of models that fuses AR and MDM paradigms, smoothly interpolating between their perplexities while overcoming their respective limitations. Unlike prior work, which uses transformers with bidirectional attention as MDM denoisers, we exploit the connection between MDMs and Any-Order autoregressive models and adopt causal attention. This design lets us compute the exact likelihood of MDMs for the first time and, crucially, enables us to introduce KV caching for MDMs while preserving parallel generation for the first time, significantly improving inference efficiency.},
+  title     = {Esoteric Language Models: A Family of Any-Order Diffusion {LLM}s},
+  author    = {Subham Sekhar Sahoo and Zhihan Yang and Yash Akhauri and Johnna Liu and Deepansha Singh and Zhoujun Cheng and Zhengzhong Liu and Eric P. Xing and John Thickstun and Arash Vahdat},
+  booktitle = {International Conference on Machine Learning},
+  year      = {2026},
+  abbr      = {ICML},
+  arxiv     = {2506.01928},
+  code      = {https://github.com/s-sahoo/Eso-LMs},
+  website   = {http://s-sahoo.github.io/Eso-LMs},
+  selected  = {true}
+}
+
+@inproceedings{sahoo2026bridging,
+  abstract  = {Diffusion-based language models offer a compelling alternative to autoregressive (AR) models by enabling parallel and controllable generation. Within this family, Masked Diffusion Models (MDMs) currently perform best but still underperform AR models in perplexity and lack key inference-time efficiency features, most notably KV caching. We introduce Esoteric Language Models (Eso-LMs), a new family of models that fuses AR and MDM paradigms, smoothly interpolating between their perplexities while overcoming their respective limitations. Unlike prior work, which uses transformers with bidirectional attention as MDM denoisers, we exploit the connection between MDMs and Any-Order autoregressive models and adopt causal attention. This design lets us compute the exact likelihood of MDMs for the first time and, crucially, enables us to introduce exact KV caching for MDMs while preserving parallel generation over the full sequence length for the first time, significantly improving inference efficiency. Combined with an optimized sampling schedule, Eso-LMs achieves a new state of the art on the speed-quality Pareto frontier for unconditional generation. On longer contexts, it yields 14 − 65× faster inference than standard MDMs and 3 − 4× faster inference than prior semi-autoregressive approaches. We provide code, model checkpoints, and a talk recording on the project page: https://s-sahoo.com/Eso-LMs.},
+  title     = {Esoteric Language Models: Bridging Autoregressive and Masked Diffusion LLMs},
+  author    = {Subham Sekhar Sahoo and Zhihan Yang and Yash Akhauri and Johnna Liu and
+               Deepansha Singh and Zhoujun Cheng and Zhengzhong Liu and Eric Xing and
+               John Thickstun and Arash Vahdat},
+  booktitle = {ICLR Workshop on Multimodal Intelligence: Next Token Prediction and Beyond},
+  year      = {2026},
+  abbr      = {ICLR-W},
+  arxiv     = {2506.01928},
+  pdf       = {https://openreview.net/forum?id=CKrPJveQIr},
+  code      = {https://github.com/s-sahoo/Eso-LMs},
+  website   = {http://s-sahoo.github.io/Eso-LMs},
+}
+
+@inproceedings{gong2026reliability,
+  abstract  = {The explosive growth of scientific literature has created an urgent need for autonomous agents capable of rigorous evidence verification. However, existing evaluation frameworks largely rely on sanitized oracle settings (e.g. pre-parsed PDFs) or controlled knowledge environments (e.g. curated corpus), which abstracts away the noise and complexity of real-world research. We develop a framework for evaluating agentic evidence verification under realistic conditions, grounding our study on a set of 200 open-source papers from the SuperCon database. We select materials science as our testbed because it demands exact numerical grounding and binary factual certainty---strict constraints that expose model reliability issues. We develop our evaluation criteria on accuracy and reliability with material science experts, focusing on two core workflows: Multi-Property Extraction from raw, multimodal PDFs, and Open-World Precedent Search on the live web, explicitly testing the ability to verify "negative results". Systematic study of general-purpose agents reveals a sobering reality: models often identify relevant properties or materials but fail to reliably extract precise values or ensure that answer correctness is grounded with valid attribution---highlighting a fundamental reliability gap in current systems.},
+  title     = {The Reliability Gap in Agentic Evidence Verification for Materials Science},
+  author    = {Albert Gong and James J. Kim and Anmol Kabra and Aaditya Panigrahi and Jiashuo Wang and Arjun B. Mulchandani and Michael Freeman and Fatmagul Katmer and Joshua Peters Wakefield and Linxi Zhao and Chao Wan and Akanksha Sarkar and Yoav Artzi and Leslie M. Schoop and John Thickstun and Kilian Q. Weinberger and Eun-Ah Kim and Peter I. Frazier and Jennifer J. Sun},
+  booktitle = {ICLR Workshops on Agents in the Wild (AIWILD) and Foundation Models for Science (FM4Science)},
+  year      = {2026},
+  abbr      = {ICLR-W},
+}
+
+@inproceedings{kazemian2026benchmark,
+  abstract  = {Social and collaborative platforms emit multivariate time-series traces in which early interactions -- such as views, likes, or downloads -- are followed, sometimes months or years later, by higher impact like citations, sales, or reviews. We formalize this setting as Lead-Lag Forecasting (LLF): given an early usage channel (the lead), predict a correlated but temporally shifted outcome channel (the lag). Despite the ubiquity of such patterns, LLF has not been treated as a unified forecasting problem within the time-series community, largely due to the absence of standardised datasets. To anchor research in LLF, here we present two high-volume benchmark datasets: arXiv (accesses to citations of 2.3M papers) and GitHub (pushes/stars to forks of 3M repositories). Our datasets provide ideal testbeds for lead-lag forecasting, by capturing long-horizon dynamics across years, spanning the full spectrum of outcomes, and avoiding survivorship bias in sampling. We documented all technical details of data curation and cleaning, verified the presence of lead-lag dynamics through statistical and classification tests, and benchmarked parametric and non-parametric baselines for regression.},
+  title     = {Benchmark Datasets for Lead-Lag Forecasting on Social Platforms},
+  author    = {Kimia Kazemian and Zhenzhen Liu and Yangfanyu Yang and Katie Z. Luo and Shuhan Gu and Audrey Du and Xinyu Yang and Jack Jansons and Kilian Q. Weinberger and John Thickstun and Yian Yin and Sarah Dean},
+  booktitle = {Knowledge Discovery in Databases - Datasets and Benchmarks Track},
+  year      = {2026},
+  abbr      = {KDD},
+  arxiv     = {2511.03877},
+  website   = {https://lead-lag-forecasting.github.io/},
+}
+
+
+@inproceedings{singh2025robust,
+  abstract  = {The proliferation of distorted, compressed, and manipulated music on modern media platforms like TikTok motivates the development of more robust audio fingerprinting techniques to identify the sources of musical recordings. In this paper, we develop and evaluate new neural audio fingerprinting techniques with the aim of improving their robustness. We make two contributions to neural fingerprinting methodology: (1) we use a pretrained music foundation model as the backbone of the neural architecture and (2) we expand the use of data augmentation to train fingerprinting models under a wide variety of audio manipulations, including time stretching, pitch modulation, compression, and filtering. We systematically evaluate our methods in comparison to two state-of-the-art neural fingerprinting models: NAFP and GraFPrint. Results show that fingerprints extracted with music foundation models (e.g., MuQ, MERT) consistently outperform models trained from scratch or pretrained on non-musical audio. Segment-level evaluation further reveals their capability to accurately localize fingerprint matches, an important practical feature for catalog management.},
+  title     = {Robust Neural Audio Fingerprinting using Music Foundation Models},
+  author    = {Shubhr Singh and Kiran Bhat and Benjamin Resnick and Xavier Riley and John Thickstun and Walter De Brouwer},
+  booktitle = {NeurIPS Workshop on AI for Music},
+  year      = {2025},
+  abbr      = {NeurIPS-W},
+  arxiv     = {2511.05399},
+}
+
+@inproceedings{jayaram2025constrained,
+  abstract  = {We introduce Linearly Constrained Diffusion Implicit Models (CDIM), a fast and accurate approach to solving noisy linear inverse problems using diffusion models. Traditional diffusion-based inverse methods rely on numerous projection steps to enforce measurement consistency in addition to unconditional denoising steps. CDIM achieves a 10-50x reduction in projection steps by dynamically adjusting the number and size of projection steps to align a residual measurement energy with its theoretical distribution under the forward diffusion process. This adaptive alignment preserves measurement consistency while substantially accelerating constrained inference. For noise-free linear inverse problems, CDIM exactly satisfies the measurement constraints with few projection steps, even when existing methods fail. We demonstrate CDIM's effectiveness across a range of applications, including super-resolution, denoising, inpainting, deblurring, and 3D point cloud reprojection.},
+  title     = {Linearly Constrained Diffusion Implicit Models},
+  author    = {Vivek Jayaram and Ira Kemelmacher-Shlizerman and Steven M Seitz and John Thickstun},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2025},
+  abbr      = {Neurips},
+  arxiv     = {2411.00359},
+  code      = {https://github.com/vivjay30/cdim},
+  website   = {https://grail.cs.washington.edu/projects/cdim/},
+}
+
 @inproceedings{huang2025aligning,
   abstract  = {Despite significant recent advances in generative acoustic text-to-music (TTM) modeling, robust evaluation of these models lags behind, relying in particular on the popular Fr\'echet Audio Distance (FAD). In this work, we rigorously study the design space of reference-based divergence metrics for evaluating TTM models through (1) designing four synthetic meta-evaluations to measure sensitivity to particular musical desiderata, and (2) collecting and evaluating on MusicPrefs, the first open-source dataset of human preferences for TTM systems. We find that not only is the standard FAD setup inconsistent on both synthetic and human preference data, but that nearly all existing metrics fail to effectively capture desiderata, and are only weakly correlated with human perception. We propose a new metric, the MAUVE Audio Divergence (MAD), computed on representations from a self-supervised audio embedding model. We find that this metric effectively captures diverse musical desiderata (average rank correlation 0.84 for MAD vs. 0.49 for FAD and also correlates more strongly with MusicPrefs (0.62 vs. 0.14).},
   title     = {Aligning Text-to-Music Evaluation with Human Preferences},
@@ -10,17 +103,6 @@
   abbr      = {ISMIR},
   arxiv     = {2503.16669},
   code      = {https://github.com/i-need-sleep/mad},
-}
-
-@article{sekhar2025esoteric,
-  abstract  = {Diffusion-based language models offer a compelling alternative to autoregressive (AR) models by enabling parallel and controllable generation. Among this family of models, Masked Diffusion Models (MDMs) achieve the strongest performance but still underperform AR models in perplexity and lack key inference-time efficiency features--most notably, KV caching. In this work, we introduce Eso-LMs, a new family of models that fuses AR and MDM paradigms, enabling smooth interpolation between their perplexities while overcoming their respective limitations. Eso-LMs set a new state of the art on standard language modeling benchmarks. Crucially, we are the **first to introduce KV caching for MDMs** while preserving parallel generation, significantly improving inference efficiency. Combined with an optimized sampling schedule, our method achieves up to **65x** faster inference than standard MDMs and **4x** faster inference than prior semi-autoregressive approaches.},
-  title     = {Esoteric Language Models},
-  author    = {Subham Sekhar Sahoo and Zhihan Yang and Yash Akhauri and Johnna Liu and Deepansha Singh and Zhoujun Cheng and Zhengzhong Liu and Eric Xing and John Thickstun and Arash Vahdat},
-  year      = {2025}, 
-  abbr      = {arXiv},
-  arxiv     = {2506.01928},
-  code      = {https://github.com/s-sahoo/Eso-LMs},
-  website   = {http://s-sahoo.github.io/Eso-LMs},
 }
 
 @inproceedings{donahue2024hookpad,
@@ -33,17 +115,6 @@
   arxiv     = {2502.08122},
   website   = {https://www.hooktheory.com/hookpad/aria},
 }
-
-@article{jayaram2024constrained,
-  abstract  = {This paper describes an efficient algorithm for solving noisy linear inverse problems using pretrained diffusion models. Extending the paradigm of denoising diffusion implicit models (DDIM), we propose constrained diffusion implicit models (CDIM) that modify the diffusion updates to enforce a constraint upon the final output. For noiseless inverse problems, CDIM exactly satisfies the constraints; in the noisy case, we generalize CDIM to satisfy an exact constraint on the residual distribution of the noise. Experiments across a variety of tasks and metrics show strong performance of CDIM, with analogous inference acceleration to unconstrained DDIM: 10 to 50 times faster than previous conditional diffusion methods. We demonstrate the versatility of our approach on many problems including super-resolution, denoising, inpainting, deblurring, and 3D point cloud reconstruction.},
-  title     = {Constrained Diffusion Implicit Models},
-  author    = {Vivek Jayaram and Ira Kemelmacher-Shlizerman and Steven M Seitz and John Thickstun},
-  year      = {2024}, 
-  abbr      = {arXiv},
-  arxiv     = {2411.00359},
-  code      = {https://github.com/vivjay30/cdim},
-  website   = {https://grail.cs.washington.edu/projects/cdim/},
-} 
 
 @inproceedings{becker2024designing,
   abstract  = {Recent progress in generative models for music has highlighted the need for interactive, controllable systems that service the goals of musicians. In this paper, we introduce a system that integrates a compositional assistant and live improvisational partner directly into the modern music producer’s toolkit–the digital audio workstation. Our system design is guided by 1) integration with modern music production software, 2) non-linear songwriting workflows, and 3) enabling generative AI to support live improvisation tasks. We find that anticipatory transformer models are well suited for these goals, and present a method for adapting an anticipatory model for live improvisation. We call on future work to further explore human-AI co-performance by designing systems to be accessible and integrated into the workflows of domain experts.},
@@ -93,7 +164,6 @@
   abbr      = {JMLR},
   arxiv     = {2212.14578},
   code      = {https://github.com/krishnap25/mauve},
-  selected  = {true}
 }
 
 @inproceedings{hewitt2023backpack,
@@ -194,7 +264,6 @@
   code      = {https://github.com/vivjay30/pnf-sampling/},
   poster    = {thickstun_langevin_poster.pdf},
   website   = {https://grail.cs.washington.edu/projects/pnf-sampling/},
-  selected  = {true}
 }
 
 @inproceedings{ainsworth2021faster,
@@ -291,7 +360,6 @@
   award     = {Oral Presentation},
   arxiv     = {1711.04845},
   code      = {https://github.com/jthickstun/thickstun2018invariances},
-  selected  = {true}
 }
 
 @article{thickstun2017mirex,
