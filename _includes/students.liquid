@@ -1,13 +1,16 @@
-<ul>
-  {% for s in site.data.students %}
-    <li>
-      {% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
-      — {{ s.role }}
-      {% if s.graduated %}
-        ({{ s.graduated }}, graduated)
-      {% elsif s.since %}
-        (since {{ s.since }})
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+<div class="students">
+  <h2>students</h2>
+  <ul>
+    {% for s in site.data.students %}
+      <li>
+        {% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+        — {{ s.role }}
+        {% if s.graduated %}
+          ({{ s.graduated }}, graduated)
+        {% elsif s.since %}
+          (since {{ s.since }})
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
