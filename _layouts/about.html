@@ -37,6 +37,10 @@ layout: default
       {% include news.html %}
     {% endif %}
 
+    {% if page.students %}
+      {% include students.liquid %}
+    {% endif %}
+
     {% if page.selected_papers %}
       {% include selected_papers.html %}
     {% endif %}
