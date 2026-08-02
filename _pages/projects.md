@@ -3,7 +3,8 @@ layout: page
 title: projects
 permalink: /projects/
 description: Below are some of my broad research directions.
-nav: true
+nav: false
+published: false
 display_categories: [work, fun]
 horizontal: true
 ---

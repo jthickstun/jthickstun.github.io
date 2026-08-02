@@ -3,7 +3,8 @@ layout: page
 permalink: /service/
 title: service
 description: Professional and departmental academic service.
-nav: true
+nav: false
+published: false
 ---
 
 #### Reviewing

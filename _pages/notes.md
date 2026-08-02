@@ -6,7 +6,11 @@ description: Notes and tutorials loosely organized by topic.
 nav: true
 ---
 
-#### machine Learning
+#### course notes
+
+<a href="https://courses.cs.washington.edu/courses/cse599i/20au/">CSE 599 Generative Models</a>:University of Washington (2020)
+
+#### machine learning
 
 <a href="gans.pdf">A brief mathematical introduction to GAN's</a>
 

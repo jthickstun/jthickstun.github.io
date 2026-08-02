@@ -3,7 +3,8 @@ layout: page
 permalink: /talks/
 title: talks
 description: Invited talks and presentations.
-nav: true
+nav: false
+published: false
 ---
 
 <b>Anticipation and the Anticipatory Music Transformer</b>.
