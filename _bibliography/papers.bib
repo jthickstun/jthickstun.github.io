@@ -1,6 +1,17 @@
 ---
 ---
 
+@inproceedings{yang2026continuous,
+  abstract  = {While diffusion has drawn considerable recent attention from the language modeling community, continuous diffusion has appeared less scalable than discrete approaches. To challenge this belief we revisit Plaid, a likelihood-based continuous diffusion language model (DLM), and construct RePlaid by aligning the architecture of Plaid with modern discrete DLMs. In this unified setting, we establish the first scaling law for continuous DLMs that rivals discrete DLMs: RePlaid exhibits a compute gap of only 20x compared to autoregressive models, outperforms Duo while using fewer parameters, and outperforms MDLM in the over-trained regime. We benchmark RePlaid against recent continuous DLMs: on OpenWebText, RePlaid achieves a new state-of-the-art PPL bound of 22.1 among continuous DLMs and superior generation quality. These results suggest that continuous diffusion, when trained via likelihood, is a highly competitive and scalable alternative to discrete DLMs. Moreover, we offer theoretical insights to understand the advantage of likelihood-based training. We show that optimizing the noise schedule to minimize the ELBO's variance naturally yields linear cross-entropy (information loss) over time. This evenly distributes denoising difficulty without any case-specific time reparameterization. In addition, we find that optimizing embeddings via likelihood creates structured geometries and drives the most significant likelihood gain.},
+  title     = {Continuous Diffusion Scales Competitively with Discrete Diffusion for Language},
+  author    = {Zhihan Yang and Wei Guo and Shuibai Zhang and Subham Sekhar Sahoo and Yongxin Chen and Arash Vahdat and Morteza Mardani and John Thickstun},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026},
+  abbr      = {Neurips},
+  arxiv     = {2605.18530},
+  selected  = {true}
+}
+
 @inproceedings{susser2026forensics,
   abstract  = {The arrival of generative AI as a cheap, widely accessible commercial service, and the tidal wave of AI-generated synthetic content it has unleashed, have provoked deep epistemic and social anxieties and raised difficult governance questions that policymakers are struggling to address. One approach that has attracted both enthusiasm from regulators and skepticism from researchers is digital watermarking. Signals embedded in a synthetically-generated piece of content indicating that it was AI-generated---possibly even identifying the specific systems that generated it---appear to offer a path toward mitigating risks of genAI that avoids the downsides of more interventionist strategies. But critics warn that watermarks may prove technically brittle, epistemically ambiguous, and politically ineffectual tools. In this paper, we explore the challenges and opportunities of using digital watermarking for AI governance, paying special attention to the specific problem of watermarking AI-generated text. We argue that such critiques often treat the problem of identifying synthetic content as an isolated forensic question. Instead, we propose reconceptualizing digital watermarks as tools for understanding the impacts of synthetic content on media ecosystems, rather than reliably identifying individual pieces of synthetic content. Such an "ecosystems approach" more effectively utilizes the features of watermarks. And while this approach raises its own governance challenges, we argue that they are more tractable than the challenges of using watermarks for digital forensics.},
   title     = {From Forensics to Ecosystems: Rethinking Watermarks for Generative AI Oversight},
@@ -9,6 +20,7 @@
   year      = {2026},
   abbr      = {AIES},
   arxiv     = {2608.07337},
+  selected  = {true}
 }
 
 @inproceedings{lin2026factual,
